@@ -64,6 +64,28 @@
                 }
               ]
             },
+            "staging": {
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": false,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
+            },
             "development": {
               "vendorChunk": true,
               "extractLicenses": false,
@@ -90,6 +112,9 @@
           "configurations": {
             "production": {
               "browserTarget": "material-dashboard-angular:build:production"
+            },
+            "staging": {
+              "browserTarget": "material-dashboard-angular:build:staging"
             },
             "development": {
               "browserTarget": "material-dashboard-angular:build:development"

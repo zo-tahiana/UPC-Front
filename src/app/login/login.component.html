@@ -1,1 +1,39 @@
-<p>Login work</p>
+<div id="myModal" class="modal fade show" aria-modal="true" style="display: block">
+	<div class="modal-dialog modal-login modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body" [formGroup]="form">
+        <h4 class="modal-title">Bienvenue</h4>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Pseudo ou email</mat-label>
+            <input matInput formControlName="identification">
+            <mat-hint *ngIf="identification.invalid && (identification.dirty || identification.touched)">
+              <span class="text-danger" *ngIf="identification.errors?.['required']">
+                Saisissez votre pseudo ou email
+              </span>
+            </mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput type="password" formControlName="password">
+            <mat-hint *ngIf="password.invalid && (password.dirty || password.touched)">
+              <span class="text-danger" *ngIf="password.errors?.['required']">
+                Entrez votre mot de passe
+              </span>
+            </mat-hint>
+          </mat-form-field>
+        </p>
+        <div class="form-group">
+          <button [disabled]="identification.invalid || password.invalid" (click)="signin()" class="btn btn-primary btn-lg btn-block login-btn">
+            Se connecter
+          </button>
+        </div>
+			</div>
+      <div class="modal-footer text-center">
+        <a href="javascript:void(0)">Mot de passe oublié ?</a>
+      </div>
+		</div>
+	</div>
+</div>
