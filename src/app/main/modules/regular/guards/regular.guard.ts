@@ -17,7 +17,7 @@ export class RegularGuard implements CanActivate {
       if (user.isSuperAdmin) {
         this.router.navigateByUrl('/admin');
       } else {
-        this.router.navigateByUrl('/signin');
+        this.router.navigateByUrl('/se-connecter');
       }
     }
     return Boolean(user && user.org);

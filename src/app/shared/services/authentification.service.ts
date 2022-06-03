@@ -41,10 +41,10 @@ export class AuthentificationService {
       const response: any = await firstValueFrom(this.http.post(url, { token }));
       if (response.user) userStore.user.next(response.user);
       if (response.ok) return { allowed: true };
-      this.router.navigate(['/signin']);
+      this.router.navigate(['/se-connecter']);
       return { allowed: false };
     } else {
-      this.router.navigate(['/signin']);
+      this.router.navigate(['/se-connecter']);
       return { allowed: false };
     }
   }

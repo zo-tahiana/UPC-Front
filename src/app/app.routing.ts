@@ -11,12 +11,12 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'signin',
+    path: 'se-connecter',
     loadChildren: () => import('./login/login.module').then((m) => m.LoginModule)
   },
   {
     path: '**',
-    redirectTo: 'dashboard'
+    redirectTo: 'tableau-de-bord'
   }
 ];
 

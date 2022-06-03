@@ -11,6 +11,9 @@ import { SidebarComponent } from './directives/sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DirectivesModule } from 'app/main/directives/directives.module';
 import { OrganizationsComponent } from './components/organizations/organizations.component';
+import { CreateOrganizationComponent } from './components/organizations/create-organization/create-organization.component';
+import { CreateAccountComponent } from './components/accounts/create-account/create-account.component';
+import { AccountsComponent } from './components/accounts/accounts.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { OrganizationsComponent } from './components/organizations/organizations
     AdminComponent,
     SidebarComponent,
     DashboardComponent,
-    OrganizationsComponent
+    OrganizationsComponent,
+    CreateOrganizationComponent,
+    CreateAccountComponent,
+    AccountsComponent
   ]
 })
 export class AdminModule { }

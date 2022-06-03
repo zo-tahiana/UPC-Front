@@ -17,7 +17,7 @@ export class AdminGuard implements CanActivate {
       if (user.org) {
         this.router.navigateByUrl('/');
       } else {
-        this.router.navigateByUrl('/signin');
+        this.router.navigateByUrl('/se-connecter');
       }
     }
     return Boolean(user && user.isSuperAdmin);

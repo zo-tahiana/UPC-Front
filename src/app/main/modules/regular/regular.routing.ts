@@ -6,7 +6,7 @@ import { RegularComponent } from './regular.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'tableau-de-bord',
     pathMatch: 'full'
   },
   {
@@ -14,7 +14,7 @@ const routes: Routes = [
     component: RegularComponent,
     children: [
       {
-        path: 'dashboard',
+        path: 'tableau-de-bord',
         component: DashboardComponent
       }
     ]

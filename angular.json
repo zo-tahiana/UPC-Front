@@ -23,7 +23,8 @@
             "styles": [
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "src/assets/scss/material-dashboard.scss",
-              "src/assets/css/demo.css"
+              "src/assets/css/demo.css",
+              "src/styles.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
@@ -107,17 +108,17 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "material-dashboard-angular:build"
+            "browserTarget": "upc-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "material-dashboard-angular:build:production"
+              "browserTarget": "upc-app:build:production"
             },
             "staging": {
-              "browserTarget": "material-dashboard-angular:build:staging"
+              "browserTarget": "upc-app:build:staging"
             },
             "development": {
-              "browserTarget": "material-dashboard-angular:build:development"
+              "browserTarget": "upc-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -125,7 +126,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "material-dashboard-angular:build"
+            "browserTarget": "upc-app:build"
           }
         },
         "test": {
