@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './main/guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./main/main.module').then((m) => m.MainModule)
+    loadChildren: () => import('./main/main.module').then((m) => m.MainModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'signin',
