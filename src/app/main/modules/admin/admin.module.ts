@@ -10,6 +10,7 @@ import { AdminComponent } from './admin.component';
 import { SidebarComponent } from './directives/sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DirectivesModule } from 'app/main/directives/directives.module';
+import { OrganizationsComponent } from './components/organizations/organizations.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { DirectivesModule } from 'app/main/directives/directives.module';
   declarations: [
     AdminComponent,
     SidebarComponent,
-    DashboardComponent
+    DashboardComponent,
+    OrganizationsComponent
   ]
 })
 export class AdminModule { }
